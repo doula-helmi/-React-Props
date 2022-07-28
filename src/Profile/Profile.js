@@ -1,6 +1,5 @@
 import propTypes from 'prop-types';
 
-
 const containerStyle ={
   backgroundColor: '#231E39',
 	borderRdius: '5px',
@@ -25,9 +24,6 @@ const ButtonStyle = {
 	padding: '10px 25px'
 }
 
-const displayname =(name) => {
-  alert(`My name is ${name}`);
-};
 
 const Profile = (props) => {
   return (
@@ -43,7 +39,7 @@ const Profile = (props) => {
         {props.Bio}
         </p>
         <div className="buttons">
-          <button style={ButtonStyle} onClick={()=>displayname(props.fullName)}>Click Here</button>
+          <button style={ButtonStyle}  onClick={()=> props.handleName(props.FullName) }>Click Here</button>
         </div>
       </div>
     </>
